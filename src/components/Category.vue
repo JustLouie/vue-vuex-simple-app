@@ -1,21 +1,24 @@
 <template>
   <div class="Category">
     <ul class="Category-items">
-      <li>Item1</li>
-      <li>Item2</li>
-      <li>Item3</li>
-      <li>Item4</li>
-      <li>Item5</li>
+      <li v-for="item in items">{{ item }}</li>
     </ul>
   </div>
 </template>
 <script type="text/javascript">
+  import { mapGetters } from 'vuex'
+
   let categoryData = {
 
   }
   export default {
     data () {
       return categoryData
+    },
+    computed: {
+      ...mapGetters({
+        items: 'getItems'
+      })
     }
   }
 </script>
