@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <hheader></hheader>
-    <category></category>
-    <products></products>
+    <appheader />
+    <category />
+    <products />
   </div>
 </template>
 <script>
@@ -12,7 +12,7 @@
 
   export default {
     components: {
-      'hheader': Header,
+      'appheader': Header,
       'category': Category,
       'products': Products
     }
