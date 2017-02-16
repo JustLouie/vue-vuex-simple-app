@@ -2,18 +2,21 @@
   <div class="Header">
     <div class="Header-search">
       <form>
-        <input type="text" name="search">
+        <input type="text" name="search" :placeholder="placeholder">
       </form>
     </div>
   </div>
 </template>
 <script type="text/javascript">
   let headerData = {
-
+    placeholder: 'Search...'
   }
   export default {
     data () {
       return headerData
+    },
+    methods: {
+
     }
   }
 </script>
@@ -27,14 +30,14 @@
       width: 300px;
       height: 100%;
       margin: auto;
-      background: red;
       input {
         width: 100%;
         height: 40px;
         background: white;
         border: none;
         outline: none;
-        // margin: 20px;
+        margin-top: 28px;
+        text-indent: 5px;
       }
     }
   }
