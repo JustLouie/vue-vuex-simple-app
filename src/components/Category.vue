@@ -24,7 +24,7 @@
 </script>
 <style lang="scss">
   .Category {
-    width: 200px;
+    width: 15%;
     height: 70vh;
     float: left;
     border: 1px solid black;
@@ -42,6 +42,11 @@
         align: center;
       }
       border-bottom: 1px solid black;
+      &:hover {
+        background: black;
+        color: white;
+        cursor: pointer;
+      }
     }
   }
 </style>
