@@ -1,10 +1,14 @@
 <template>
   <div class="home">
-    <h1>Hello World</h1>
+    <hheader></hheader>
   </div>
 </template>
 <script>
-  export default {
+  import Header from './Header'
 
+  export default {
+    components: {
+      'hheader': Header
+    }
   }
 </script>

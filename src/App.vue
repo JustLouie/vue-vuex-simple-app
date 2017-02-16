@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script>
+<script type="text/javascript">
 import Home from './components/Home'
 
 export default {
@@ -14,3 +14,9 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+*{
+  margin: 0;
+  padding: 0;
+}
+</style>
