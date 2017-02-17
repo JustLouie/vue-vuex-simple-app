@@ -4,6 +4,7 @@
       <div class="Product-pic" :style="{backgroundImage: product.pic}"></div>
       <h3>{{ product.name }}</h3>
       <p>{{ product.description }}</p>
+      <i class="material-icons">{{ product.cart.default }}</i>
     </div>
   </div>
 </template>

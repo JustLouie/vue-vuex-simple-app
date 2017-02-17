@@ -8,37 +8,85 @@ const state = {
       pic: 'url(./static/logo.png)',
       name: 'Item1-Orange Shoes',
       description: 'Bla Bla Bla Blo Blo Blo Blu Blu Blu',
-      filter: 'Item1'
+      filter: 'Item1',
+      cart: {
+        default: 'add_shopping_cart',
+        onClick: 'shopping_cart'
+      },
+      start: {
+        default: 'star_border',
+        onClick: 'star'
+      }
     },
     {
       pic: 'url(./static/logo.png)',
       name: 'Item2-Red Shoes',
       description: 'Bla Bla Bla Blo Blo Blo Blu Blu Blu',
-      filter: 'Item2'
+      filter: 'Item2',
+      cart: {
+        default: 'add_shopping_cart',
+        onClick: 'shopping_cart'
+      },
+      start: {
+        default: 'star_border',
+        onClick: 'star'
+      }
     },
     {
       pic: 'url(./static/logo.png)',
       name: 'Item3-Orange Shoes',
       description: 'Bla Bla Bla Blo Blo Blo Blu Blu Blu',
-      filter: 'Item3'
+      filter: 'Item3',
+      cart: {
+        default: 'add_shopping_cart',
+        onClick: 'shopping_cart'
+      },
+      start: {
+        default: 'star_border',
+        onClick: 'star'
+      }
     },
     {
       pic: 'url(./static/logo.png)',
       name: 'Item4-Orange Shoes',
       description: 'Bla Bla Bla Blo Blo Blo Blu Blu Blu',
-      filter: 'Item4'
+      filter: 'Item4',
+      cart: {
+        default: 'add_shopping_cart',
+        onClick: 'shopping_cart'
+      },
+      start: {
+        default: 'star_border',
+        onClick: 'star'
+      }
     },
     {
       pic: 'url(./static/logo.png)',
       name: 'Item4-Orange Shoes',
       description: 'Bla Bla Bla Blo Blo Blo Blu Blu Blu',
-      filter: 'Item4'
+      filter: 'Item4',
+      cart: {
+        default: 'add_shopping_cart',
+        onClick: 'shopping_cart'
+      },
+      start: {
+        default: 'star_border',
+        onClick: 'star'
+      }
     },
     {
       pic: 'url(./static/logo.png)',
       name: 'Item6-Orange Shoes',
       description: 'Bla Bla Bla Blo Blo Blo Blu Blu Blu',
-      filter: 'Item6'
+      filter: 'Item6',
+      cart: {
+        default: 'add_shopping_cart',
+        onClick: 'shopping_cart'
+      },
+      start: {
+        default: 'star_border',
+        onClick: 'star'
+      }
     }
   ],
   newProduct: [],

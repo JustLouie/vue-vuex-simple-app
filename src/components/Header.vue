@@ -13,11 +13,11 @@
     </div>
     <div class="Header-cart">
       <i @click="cartActive" class="material-icons">{{
-        cart.shopping_cart.active ? cart.shopping_cart.onClick : cart.shopping_cart.default
+        cart.shopping_cart.default
       }}
       </i>
       <i @click="starActive" class="material-icons">{{
-        cart.star.active ? cart.star.onClick : cart.star.default
+        cart.star.default
       }}</i>
     </div>
   </div>
@@ -29,14 +29,10 @@
     placeholder: 'Search...',
     cart: {
       star: {
-        default: 'star_border',
-        onClick: 'star',
-        active: false
+        default: 'star_border'
       },
       shopping_cart: {
-        default: 'add_shopping_cart',
-        onClick: 'shopping_cart',
-        active: false
+        default: 'add_shopping_cart'
       }
     }
   }
@@ -54,10 +50,10 @@
         this.$store.dispatch('onSearch', { value: e.target.value })
       },
       starActive () {
-        this.cart.star.active = !this.cart.star.active
+
       },
       cartActive () {
-        this.cart.shopping_cart.active = !this.cart.shopping_cart.active
+
       }
     }
   }
