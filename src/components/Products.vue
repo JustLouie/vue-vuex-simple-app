@@ -26,7 +26,7 @@
     },
     methods: {
       iconActive (type, index) {
-        this.$store.dispatch('iconActive', { type: type, index: index })
+        this.$store.dispatch('iconActive', { cartype: type, index: index })
       }
     },
     computed: {

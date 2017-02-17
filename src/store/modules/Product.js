@@ -102,8 +102,7 @@ const state = {
     }
   ],
   newProduct: [],
-  searchedProduct: [],
-  cartCount: 0
+  searchedProduct: []
 }
 
 export default {
@@ -133,7 +132,8 @@ export default {
       }
     },
     [types.ICON_ACTIVE] (state, action) {
-      state.product[action.index][action.type].active = !state.product[action.index][action.type].active
+      state.type = action.type
+      state.product[action.index][action.cartype].active = !state.product[action.index][action.cartype].active
     }
   },
   getters: {
@@ -149,7 +149,12 @@ export default {
       return state.searchedProduct
     },
     getCartCount (state) {
-      return state.cartCount
+      switch (state.type) {
+        case types.ICON_ACTIVE:
+          return state.product.filter(item => item.cart.active).length
+        default:
+          return '0'
+      }
     }
   }
 

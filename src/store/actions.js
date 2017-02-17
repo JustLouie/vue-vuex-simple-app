@@ -8,7 +8,7 @@ let actions = {
     commit(types.ON_SEARCH, {...payload, type: types.ON_SEARCH})
   },
   iconActive ({ commit }, payload) {
-    commit(types.ICON_ACTIVE, payload)
+    commit(types.ICON_ACTIVE, { ...payload, type: types.ICON_ACTIVE })
   }
 }
 
