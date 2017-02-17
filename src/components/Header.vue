@@ -2,11 +2,11 @@
   <div class="Header">
     <div class="Header-search">
       <form class="Search-form">
-        <input @input="onSearch" type="text" name="search" :placeholder="placeholder">
+        <input @input="onSearch" type="text" name="search" :placeholder="placeholder" autocomplete="off">
         <div class="Searched-data">
-          <div class="Searched-data-item">
-            <div class="item-pic" style="background-image: url('./static/logo.png');"></div>
-            <p>blblblblb</p>
+          <div v-for="item in searchedItem" class="Searched-data-item">
+            <div class="item-pic" :style="{backgroundImage: item.pic}"></div>
+            <p>{{item.name}}</p>
           </div>
         </div>
       </form>
@@ -14,12 +14,19 @@
   </div>
 </template>
 <script type="text/javascript">
+  import { mapGetters } from 'vuex'
+
   let headerData = {
     placeholder: 'Search...'
   }
   export default {
     data () {
       return headerData
+    },
+    computed: {
+      ...mapGetters({
+        searchedItem: 'searchedProduct'
+      })
     },
     methods: {
       onSearch (e) {
@@ -54,7 +61,7 @@
   }
   .Searched-data {
     width: 100%;
-    height: 100px;
+    height: auto;
     float: left;
     background: white;
     &-item {
