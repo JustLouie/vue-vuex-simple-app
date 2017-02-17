@@ -6,6 +6,9 @@ let actions = {
   },
   onSearch ({ commit }, payload) {
     commit(types.ON_SEARCH, {...payload, type: types.ON_SEARCH})
+  },
+  iconActive ({ commit }, payload) {
+    commit(types.ICON_ACTIVE, payload)
   }
 }
 

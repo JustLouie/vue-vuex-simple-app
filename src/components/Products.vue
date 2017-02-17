@@ -1,10 +1,16 @@
 <template>
   <div class="Product">
-    <div v-for ="product in products" class="Product-items">
+    <div v-for ="(product, index) in products" class="Product-items">
       <div class="Product-pic" :style="{backgroundImage: product.pic}"></div>
       <h3>{{ product.name }}</h3>
       <p>{{ product.description }}</p>
-      <i class="material-icons">{{ product.cart.default }}</i>
+      <i @click="iconActive('cart', index)" class="material-icons">{{
+        product.cart.active ? product.cart.onClick : product.cart.default
+      }}</i>
+      <i @click="iconActive('star', index)" class="material-icons">{{
+        product.star.active ? product.star.onClick : product.star.default
+      }}
+      </i>
     </div>
   </div>
 </template>
@@ -17,6 +23,11 @@
   export default {
     data () {
       return productData
+    },
+    methods: {
+      iconActive (type, index) {
+        this.$store.dispatch('iconActive', { type: type, index: index })
+      }
     },
     computed: {
       ...mapGetters({
@@ -47,6 +58,14 @@
         color: white;
         padding-left: 5px;
         margin-top: 10px;
+      }
+      i {
+        color: white;
+        margin-top: 10px;
+        text: {
+          indent: 5px;
+        }
+        cursor: pointer;
       }
     }
     &-pic {

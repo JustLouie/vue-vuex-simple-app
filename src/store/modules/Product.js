@@ -11,11 +11,13 @@ const state = {
       filter: 'Item1',
       cart: {
         default: 'add_shopping_cart',
-        onClick: 'shopping_cart'
+        onClick: 'shopping_cart',
+        active: false
       },
-      start: {
+      star: {
         default: 'star_border',
-        onClick: 'star'
+        onClick: 'star',
+        active: false
       }
     },
     {
@@ -25,11 +27,13 @@ const state = {
       filter: 'Item2',
       cart: {
         default: 'add_shopping_cart',
-        onClick: 'shopping_cart'
+        onClick: 'shopping_cart',
+        active: false
       },
-      start: {
+      star: {
         default: 'star_border',
-        onClick: 'star'
+        onClick: 'star',
+        active: false
       }
     },
     {
@@ -39,11 +43,13 @@ const state = {
       filter: 'Item3',
       cart: {
         default: 'add_shopping_cart',
-        onClick: 'shopping_cart'
+        onClick: 'shopping_cart',
+        active: false
       },
-      start: {
+      star: {
         default: 'star_border',
-        onClick: 'star'
+        onClick: 'star',
+        active: false
       }
     },
     {
@@ -53,11 +59,13 @@ const state = {
       filter: 'Item4',
       cart: {
         default: 'add_shopping_cart',
-        onClick: 'shopping_cart'
+        onClick: 'shopping_cart',
+        active: false
       },
-      start: {
+      star: {
         default: 'star_border',
-        onClick: 'star'
+        onClick: 'star',
+        active: false
       }
     },
     {
@@ -67,11 +75,13 @@ const state = {
       filter: 'Item4',
       cart: {
         default: 'add_shopping_cart',
-        onClick: 'shopping_cart'
+        onClick: 'shopping_cart',
+        active: false
       },
-      start: {
+      star: {
         default: 'star_border',
-        onClick: 'star'
+        onClick: 'star',
+        active: false
       }
     },
     {
@@ -81,11 +91,13 @@ const state = {
       filter: 'Item6',
       cart: {
         default: 'add_shopping_cart',
-        onClick: 'shopping_cart'
+        onClick: 'shopping_cart',
+        active: false
       },
-      start: {
+      star: {
         default: 'star_border',
-        onClick: 'star'
+        onClick: 'star',
+        active: false
       }
     }
   ],
@@ -118,6 +130,9 @@ export default {
           }
         })
       }
+    },
+    [types.ICON_ACTIVE] (state, action) {
+      state.product[action.index][action.type].active = !state.product[action.index][action.type].active
     }
   },
   getters: {
