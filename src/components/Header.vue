@@ -12,8 +12,13 @@
       </form>
     </div>
     <div class="Header-cart">
-      <i class="material-icons">add_shopping_cart</i>
-      <i class="material-icons">star</i>
+      <i @click="cartActive" class="material-icons">{{
+        cart.shopping_cart.active ? cart.shopping_cart.onClick : cart.shopping_cart.default
+      }}
+      </i>
+      <i @click="starActive" class="material-icons">{{
+        cart.star.active ? cart.star.onClick : cart.star.default
+      }}</i>
     </div>
   </div>
 </template>
@@ -21,7 +26,19 @@
   import { mapGetters } from 'vuex'
 
   let headerData = {
-    placeholder: 'Search...'
+    placeholder: 'Search...',
+    cart: {
+      star: {
+        default: 'star_border',
+        onClick: 'star',
+        active: false
+      },
+      shopping_cart: {
+        default: 'add_shopping_cart',
+        onClick: 'shopping_cart',
+        active: false
+      }
+    }
   }
   export default {
     data () {
@@ -35,6 +52,12 @@
     methods: {
       onSearch (e) {
         this.$store.dispatch('onSearch', { value: e.target.value })
+      },
+      starActive () {
+        this.cart.star.active = !this.cart.star.active
+      },
+      cartActive () {
+        this.cart.shopping_cart.active = !this.cart.shopping_cart.active
       }
     }
   }
@@ -70,6 +93,7 @@
         line-height: 100px;
         padding-left: 10px;
         color: white;
+        cursor: pointer;
       }
     }
   }
