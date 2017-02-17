@@ -1,8 +1,14 @@
 <template>
   <div class="Header">
     <div class="Header-search">
-      <form>
+      <form class="Search-form">
         <input @input="onSearch" type="text" name="search" :placeholder="placeholder">
+        <div class="Searched-data">
+          <div class="Searched-data-item">
+            <div class="item-pic" style="background-image: url('./static/logo.png');"></div>
+            <p>blblblblb</p>
+          </div>
+        </div>
       </form>
     </div>
   </div>
@@ -23,7 +29,7 @@
   }
 </script>
 <style lang="scss">
-  .Header{
+  .Header {
     width: 100%;
     height: 100px;
     float: left;
@@ -41,6 +47,40 @@
         margin-top: 28px;
         text-indent: 5px;
       }
+    }
+  }
+  .Search-form {
+    position: relative;
+  }
+  .Searched-data {
+    width: 100%;
+    height: 100px;
+    float: left;
+    background: white;
+    &-item {
+      width: 100%;
+      height: 40px;
+      float: left;
+      border-bottom: 1px solid black;
+      p {
+        text: {
+          indent: 20px;
+          transform: capitalize;
+        }
+        line-height: 40px;
+        font: {
+          size: 18px;
+          family: arial;
+        }
+      }
+    }
+  }
+  .item-pic {
+    width: 40px;
+    height: 100%;
+    float: left;
+    background: {
+      size: cover;
     }
   }
 </style>

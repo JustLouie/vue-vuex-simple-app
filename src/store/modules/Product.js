@@ -14,23 +14,23 @@ const state = {
       pic: 'url(./static/logo.png)',
       name: 'Item2-Red Shoes',
       description: 'Bla Bla Bla Blo Blo Blo Blu Blu Blu',
-      filter: 'Item1'
+      filter: 'Item2'
     },
     {
       pic: 'url(./static/logo.png)',
       name: 'Item3-Orange Shoes',
       description: 'Bla Bla Bla Blo Blo Blo Blu Blu Blu',
-      filter: 'Item2'
+      filter: 'Item3'
     },
     {
       pic: 'url(./static/logo.png)',
       name: 'Item4-Orange Shoes',
       description: 'Bla Bla Bla Blo Blo Blo Blu Blu Blu',
-      filter: 'Item3'
+      filter: 'Item4'
     },
     {
       pic: 'url(./static/logo.png)',
-      name: 'Item5-Orange Shoes',
+      name: 'Item4-Orange Shoes',
       description: 'Bla Bla Bla Blo Blo Blo Blu Blu Blu',
       filter: 'Item4'
     },
@@ -38,7 +38,7 @@ const state = {
       pic: 'url(./static/logo.png)',
       name: 'Item6-Orange Shoes',
       description: 'Bla Bla Bla Blo Blo Blo Blu Blu Blu',
-      filter: 'Item5'
+      filter: 'Item6'
     }
   ],
   newProduct: [],
