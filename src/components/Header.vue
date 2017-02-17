@@ -15,6 +15,7 @@
       <i @click="cartActive" class="material-icons">{{
         cart.shopping_cart.default
       }}
+      <span>{{cartCount}}</span>
       </i>
       <i @click="starActive" class="material-icons">{{
         cart.star.default
@@ -32,7 +33,7 @@
         default: 'star_border'
       },
       shopping_cart: {
-        default: 'add_shopping_cart'
+        default: 'shopping_cart'
       }
     }
   }
@@ -42,7 +43,8 @@
     },
     computed: {
       ...mapGetters({
-        searchedItem: 'searchedProduct'
+        searchedItem: 'searchedProduct',
+        cartCount: 'getCartCount'
       })
     },
     methods: {
@@ -86,10 +88,33 @@
       right: 0;
       top: 0;
       i {
-        line-height: 100px;
+        height: 30px;
+        margin-top: 38px;
         padding-left: 10px;
         color: white;
         cursor: pointer;
+        position: relative;
+        span {
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          right: -5%;
+          top: -18%;
+          border-radius: 100%;
+          line-height: 15px;
+          font: {
+            size: 12px;
+            family: arial;
+          }
+          color: white;
+          text: {
+            align: center;
+          }
+          z-index: 20;
+          background: {
+            color: red;
+          }
+        }
       }
     }
   }

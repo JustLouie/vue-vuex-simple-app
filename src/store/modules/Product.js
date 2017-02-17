@@ -102,7 +102,8 @@ const state = {
     }
   ],
   newProduct: [],
-  searchedProduct: []
+  searchedProduct: [],
+  cartCount: 0
 }
 
 export default {
@@ -146,6 +147,9 @@ export default {
     },
     searchedProduct (state) {
       return state.searchedProduct
+    },
+    getCartCount (state) {
+      return state.cartCount
     }
   }
 
