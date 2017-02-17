@@ -16,7 +16,9 @@
       return headerData
     },
     methods: {
-
+      onSearch (value) {
+        this.$store.dispatch('onSearch', { value: value })
+      }
     }
   }
 </script>

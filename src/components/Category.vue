@@ -1,7 +1,7 @@
 <template>
   <div class="Category">
     <ul class="Category-items">
-      <li v-for="item in items">{{ item }}</li>
+      <li v-for="(item, index) in items" @click="categoryFilter(item, index)">{{ item }}</li>
     </ul>
   </div>
 </template>
@@ -15,6 +15,11 @@
     data () {
       return categoryData
     },
+    methods: {
+      categoryFilter (item, index) {
+        this.$store.dispatch('categoryFilter', { item: item, index: index })
+      }
+    },
     computed: {
       ...mapGetters({
         items: 'getItems'
@@ -25,7 +30,7 @@
 <style lang="scss">
   .Category {
     width: 15%;
-    height: 70vh;
+    height: auto;
     float: left;
     border: 1px solid black;
   }

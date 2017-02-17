@@ -27,14 +27,13 @@
 <style lang="scss">
   .Product {
     width: 84.8%;
-    height: 500px;
+    height: auto;
     float: left;
     background: orange;
     &-items {
       width: 30%;
       height: 300px;
       float: left;
-      background-color: lighten(red, 2);
       h3 {
         font: {
           family: arial;

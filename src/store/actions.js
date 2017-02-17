@@ -1,8 +1,8 @@
-// import types from './mutation-types'
+import types from './mutation-types'
 
 let actions = {
-  onSearch ({ commit }, value) {
-    // commit(types.ON_SEARCH, value)
+  categoryFilter ({ commit }, payload) {
+    commit(types.FILTER_CATEGORY, {...payload, type: types.FILTER_CATEGORY})
   }
 }
 
