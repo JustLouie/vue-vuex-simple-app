@@ -11,6 +11,10 @@
         </div>
       </form>
     </div>
+    <div class="Header-cart">
+      <i class="material-icons">add_shopping_cart</i>
+      <i class="material-icons">star</i>
+    </div>
   </div>
 </template>
 <script type="text/javascript">
@@ -40,6 +44,7 @@
     width: 100%;
     height: 100px;
     float: left;
+    position: relative;
     background: blue;
     &-search {
       width: 300px;
@@ -53,6 +58,18 @@
         outline: none;
         margin-top: 28px;
         text-indent: 5px;
+      }
+    }
+    &-cart {
+      width: 200px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      i {
+        line-height: 100px;
+        padding-left: 10px;
+        color: white;
       }
     }
   }
