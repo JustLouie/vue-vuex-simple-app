@@ -2,7 +2,7 @@
   <div class="Header">
     <div class="Header-search">
       <form>
-        <input type="text" name="search" :placeholder="placeholder">
+        <input @input="onSearch" type="text" name="search" :placeholder="placeholder">
       </form>
     </div>
   </div>
@@ -16,8 +16,8 @@
       return headerData
     },
     methods: {
-      onSearch (value) {
-        this.$store.dispatch('onSearch', { value: value })
+      onSearch (e) {
+        this.$store.dispatch('onSearch', { value: e.target.value })
       }
     }
   }

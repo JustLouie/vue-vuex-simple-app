@@ -41,7 +41,8 @@ const state = {
       filter: 'Item5'
     }
   ],
-  newProduct: []
+  newProduct: [],
+  searchedProduct: []
 }
 
 export default {
@@ -55,6 +56,15 @@ export default {
           return items
         }
       })
+    },
+    [types.ON_SEARCH] (state, action) {
+      state.type = action.type
+      let searchWord = action.value.trim().toLowerCase()
+      state.searchedProduct = state.product.filter(items => {
+        if (items.name.toLowerCase().indexOf(searchWord) !== -1) {
+          return items
+        }
+      })
     }
   },
   getters: {
@@ -62,6 +72,8 @@ export default {
       switch (state.type) {
         case types.FILTER_CATEGORY:
           return state.newProduct
+        case types.ON_SEARCH:
+          return state.searchedProduct
         default:
           return state.product
       }
