@@ -149,12 +149,7 @@ export default {
       return state.searchedProduct
     },
     getCartCount (state) {
-      switch (state.type) {
-        case types.ICON_ACTIVE:
-          return state.product.filter(item => item.cart.active).length
-        default:
-          return '0'
-      }
+      return state.product.filter(item => item.cart.active).length
     }
   }
 

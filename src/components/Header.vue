@@ -50,12 +50,6 @@
     methods: {
       onSearch (e) {
         this.$store.dispatch('onSearch', { value: e.target.value })
-      },
-      starActive () {
-
-      },
-      cartActive () {
-
       }
     }
   }

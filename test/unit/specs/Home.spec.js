@@ -8,4 +8,10 @@ describe('Home.vue', () => {
     expect(vm.$el.querySelector('.home h1').textContent)
       .to.equal('Hello World')
   })
+  it('should render home components', () => {
+    const Constructor = Vue.extend(Home)
+    const vm = new Constructor().$mount()
+    console.log(vm)
+    // expect(vm.)
+  })
 })
