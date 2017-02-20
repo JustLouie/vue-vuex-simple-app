@@ -12,12 +12,12 @@
       </form>
     </div>
     <div class="Header-cart">
-      <i @click="cartActive" class="material-icons">{{
+      <i @click="showCart" class="material-icons">{{
         cart.shopping_cart.default
       }}
       <span>{{cartCount}}</span>
       </i>
-      <i @click="starActive" class="material-icons">{{
+      <i class="material-icons">{{
         cart.star.default
       }}</i>
     </div>
@@ -50,6 +50,9 @@
     methods: {
       onSearch (e) {
         this.$store.dispatch('onSearch', { value: e.target.value })
+      },
+      showCart () {
+        this.$store.dispatch('showCart', {})
       }
     }
   }

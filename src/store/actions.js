@@ -9,6 +9,9 @@ let actions = {
   },
   iconActive ({ commit }, payload) {
     commit(types.ICON_ACTIVE, { ...payload, type: types.ICON_ACTIVE })
+  },
+  showCart ({ commit }, payload) {
+    commit(types.SHOW_CART, {...payload, type: types.SHOW_CART})
   }
 }
 

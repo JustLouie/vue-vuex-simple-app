@@ -134,12 +134,18 @@ export default {
     [types.ICON_ACTIVE] (state, action) {
       state.type = action.type
       state.product[action.index][action.cartype].active = !state.product[action.index][action.cartype].active
+    },
+    [types.SHOW_CART] (state, action) {
+      state.type = action.type
+      state.newProduct = state.product.filter(item => item.cart.active)
     }
   },
   getters: {
     getProducts (state) {
       switch (state.type) {
         case types.FILTER_CATEGORY:
+          return state.newProduct
+        case types.SHOW_CART:
           return state.newProduct
         default:
           return state.product
